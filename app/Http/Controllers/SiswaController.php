@@ -73,5 +73,8 @@ class SiswaController extends Controller
                 'umur_siswa' => $request->umur_siswa,
                 'jenis_kelamin' => $request->jenis_kelamin,
             ]);
+
+        Alert::success('Succes', 'Data berhasil diupdate');
+        return redirect('/siswa');
     }
 }

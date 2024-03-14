@@ -33,12 +33,13 @@ Route::get('/user/{id}', function ($id) {
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
-Route::get('/siswa', [SiswaController::class, 'index']);
+// Route::get('/siswa', [SiswaController::class, 'index']);
 
 //route pelanggan
 Route::get('/siswa', [SiswaController::class, 'index']); //untuk menampilkan seljuruh data
 Route::get('/tambahsiswa', [SiswaController::class, 'tambahsiswa']); //untuk menampilkan tambah data
 Route::post('/siswa', [SiswaController::class, 'siswa']); //untuk menyimpan data baru
 Route::get('/showsiswa/{id}', [SiswaController::class, 'showsiswa']); //untuk menampilkan data berdasarkan id tertentu
+
 Route::get('/editsiswa/{id}', [SiswaController::class, 'editsiswa']);
-Route::get('/updatesiswa/{id}', [SiswaController::class, 'updatesiswa']);
+Route::put('/updatesiswa/{id}', [SiswaController::class, 'update']);
