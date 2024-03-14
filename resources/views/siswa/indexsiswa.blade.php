@@ -29,7 +29,7 @@ Data Siswa
             <td>{{ $value->jenis_kelamin }}</td>
             <td class="mr-3">
                 <a href="/showsiswa/{{$value->id}}" class="btn btn-info">Show</a>
-                <a href="/editsiswa/{{$value->id}}" class="btn btn-primary">Edit</a>
+                <a href="/siswa/{{$value->id}}/edit" class="btn btn-primary">Edit</a>
                 <a href="/siswa/{{ $value->id }}" class="btn btn-danger" data-confirm-delete="true">Delete</a>
             </td>
         </tr>

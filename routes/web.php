@@ -41,5 +41,6 @@ Route::get('/tambahsiswa', [SiswaController::class, 'tambahsiswa']); //untuk men
 Route::post('/siswa', [SiswaController::class, 'siswa']); //untuk menyimpan data baru
 Route::get('/showsiswa/{id}', [SiswaController::class, 'showsiswa']); //untuk menampilkan data berdasarkan id tertentu
 
-Route::get('/editsiswa/{id}', [SiswaController::class, 'editsiswa']);
-Route::put('/updatesiswa/{id}', [SiswaController::class, 'update']);
+Route::get('/siswa/{id}/edit', [SiswaController::class, 'editsiswa']); // untuk mengedit data berdasarkan id tertentu
+Route::put('/siswa/{id}', [SiswaController::class, 'update']);
+Route::delete('/siswa/{id}', [SiswaController::class, 'destroy']);

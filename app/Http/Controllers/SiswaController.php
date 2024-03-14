@@ -14,6 +14,11 @@ class SiswaController extends Controller
         //mengambil data dari table profile
         $profile = DB::table('profile')->get();
 
+        $title = 'Peringatan !';
+        $text = "Apakah anda yakin ingin menghapis?";
+        $icon = "Question";
+        confirmDelete($title, $text);
+
         //mengirim data dari tabel profile
         return view('siswa.indexsiswa', compact('profile'));
     }
@@ -75,6 +80,13 @@ class SiswaController extends Controller
             ]);
 
         Alert::success('Succes', 'Data berhasil diupdate');
+        return redirect('/siswa');
+    }
+
+    public function destroy($id)
+    {
+        $profile = DB::table('profile')->where('id', $id)->delete();
+        Alert::success('Success', 'Data Berhasil dihapus');
         return redirect('/siswa');
     }
 }
