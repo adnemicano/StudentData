@@ -31,6 +31,10 @@ Route::get('/user/{id}', function ($id) {
     return ('SMK Telkom Purwokerto ' . $id);
 });
 
+Route::get('/', function () {
+    return view('homepage');
+});
+
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 // Route::get('/siswa', [SiswaController::class, 'index']);
@@ -44,3 +48,7 @@ Route::get('/showsiswa/{id}', [SiswaController::class, 'showsiswa']); //untuk me
 Route::get('/siswa/{id}/edit', [SiswaController::class, 'editsiswa']); // untuk mengedit data berdasarkan id tertentu
 Route::put('/siswa/{id}', [SiswaController::class, 'update']);
 Route::delete('/siswa/{id}', [SiswaController::class, 'destroy']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
