@@ -15,7 +15,7 @@ class SiswaController extends Controller
         $profile = DB::table('profile')->get();
 
         $title = 'Peringatan !';
-        $text = "Apakah anda yakin ingin menghapis?";
+        $text = "Apakah anda yakin ingin menghapus?";
         $icon = "Question";
         confirmDelete($title, $text);
 
@@ -25,6 +25,7 @@ class SiswaController extends Controller
 
     public function tambahsiswa()
     {
+
         return view('siswa.tambahsiswa');
     }
 
@@ -46,17 +47,19 @@ class SiswaController extends Controller
         ]);
 
         Alert::success('Success Title', 'Success Message');
-        return redirect('/siswa');
+        return redirect()->route('admin.siswa');
     }
 
     public function showsiswa($id)
     {
+
         $profile = DB::table('profile')->find($id);
         return view('siswa.detailsiswa', compact('profile'));
     }
 
     public function editsiswa($id)
     {
+
         $profile = DB::table('profile')->find($id);
         return view('siswa.editsiswa', compact('profile'));
     }
@@ -80,13 +83,13 @@ class SiswaController extends Controller
             ]);
 
         Alert::success('Succes', 'Data berhasil diupdate');
-        return redirect('/siswa');
+        return redirect()->route('admin.siswa');
     }
 
     public function destroy($id)
     {
         $profile = DB::table('profile')->where('id', $id)->delete();
         Alert::success('Success', 'Data Berhasil dihapus');
-        return redirect('/siswa');
+        return redirect ()->route('admin.siswa');
     }
 }

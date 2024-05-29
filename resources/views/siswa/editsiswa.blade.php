@@ -5,7 +5,7 @@
 @section('content')
 <div class="p-3">
     <h2>Edit Data Profile Siswa {{$profile->id}} </h2>
-        <form action="/siswa/{{$profile->id}}" method="POST">
+        <form action="{{ route('admin.siswaupdate', $profile->id) }}" method="POST">
             @csrf
            @method('PUT')
             <div class="form-group">

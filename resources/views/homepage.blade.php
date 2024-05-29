@@ -90,11 +90,10 @@
                 <div class="col-md-6 ">
                   <div class="detail_box">
                     <h1>
-                      The best marketing
+                      Let's Manage Student's Data
                     </h1>
                     <p>
-                      It is a long established fact that a reader will be distracted by the readable content of a page
-                      when looking
+                      Discover our Student Data Hub – your go-to for academic insights! Navigate through grades, attendance, and activities with ease. Receive real-time notifications, fostering collaboration between students, parents, and teachers. Your data is encrypted for confidentiality. Join us and empower yourself with knowledge!
                     </p>
                     <div class="btn-box">
                       <a href="/login" class="btn-1">

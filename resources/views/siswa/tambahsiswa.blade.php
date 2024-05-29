@@ -4,7 +4,7 @@
 
 @section ('content')
 
-<form action="/siswa" method="POST">
+<form action="{{ route('admin.siswaadd') }}" method="POST">
 
     @csrf
     <div class="form-group p-3">

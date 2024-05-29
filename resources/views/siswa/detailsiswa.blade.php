@@ -17,7 +17,7 @@ Detail Profil Siswa
     </div>
     </div>
 
-<a href="/siswa" class="btn btn-primary my-3">Kembali</a>
+<a href="{{ route('admin.siswa') }}" class="btn btn-primary my-3">Kembali</a>
 </div>
 
 @endsection

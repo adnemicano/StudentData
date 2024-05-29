@@ -8,7 +8,7 @@ Data Siswa
 @section('tabel')
 
 <div class="p-3">
-    <a href="{{ route('admin.tambahsiswa') }}" class="btn btn-primary my-3">Tambah Data Siswa</a>
+    {{-- <a href="/tambahsiswa" class="btn btn-primary my-3">Tambah Data Siswa</a> --}}
     <table id="example1" class="table table-bordered table-striped">
       <thead>
       <tr>
@@ -27,11 +27,11 @@ Data Siswa
             <td>{{ $value->nis_siswa }}</td>
             <td>{{ $value->umur_siswa }}</td>
             <td>{{ $value->jenis_kelamin }}</td>
-            <td class="mr-3">
-                <a href="{{ route('admin.lihatsiswa', $value->id) }}" class="btn btn-info">Show</a>
-                <a href= "{{ route('admin.editsiswa', $value->id) }}" class="btn btn-primary">Edit</a>
-                <a href="{{ route('admin.hapussiswa', $value->id) }}" class="btn btn-danger" data-confirm-delete="true">Delete</a>
-            </td>
+            {{-- <td class="mr-3">
+                <a href="/showsiswa/{{$value->id}}" class="btn btn-info">Show</a>
+                <a href="/siswa/{{$value->id}}/edit" class="btn btn-primary">Edit</a>
+                <a href="/siswa/{{ $value->id }}" class="btn btn-danger" data-confirm-delete="true">Delete</a>
+            </td> --}}
         </tr>
         {{-- tidak ada data --}}
       </tbody>
